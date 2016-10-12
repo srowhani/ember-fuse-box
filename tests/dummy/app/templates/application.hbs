@@ -1,0 +1,30 @@
+<div class='row page-content'>
+  <div class='col l3 m4 s12 z-depth-3'>
+    <!-- BEGIN-SNIPPET application -->
+    {{test-container
+      name='inception'
+      content=(component 'fuse-box'
+        (component 'test-container'
+          name='Need to go deeper!'
+        )
+        (component 'test-container'
+          name='Going deeper'
+          content=(component 'test-container'
+            name='Even deeper!'
+          )
+        )
+      )
+    }}
+    <!-- END-SNIPPET -->
+  </div>
+  <div class='page-content overflow-scroll col l9 m8 s12'>
+    <div class='row'>
+      <h4><code>application.hbs</code></h4>
+      {{code-snippet class='snippet' name='application.hbs'}}
+    </div>
+    <div class='row'>
+      <h4><code>test-container.hbs</code></h4>
+      {{code-snippet class='snippet' name='test-container.hbs'}}
+    </div>
+  </div>
+</div>

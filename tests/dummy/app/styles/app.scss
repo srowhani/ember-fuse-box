@@ -1,0 +1,27 @@
+@import 'materialize';
+html, body.ember-application {
+  height: 100%;
+  .ember-view {
+    height: inherit;
+    .page-content {
+      height: inherit;
+      margin-bottom: initial;
+      .col {
+        height: inherit;
+        .snippet {
+          max-height: 30rem;
+        }
+      }
+      .overflow-scroll {
+        overflow: scroll;
+      }
+    }
+  }
+}
+.collapsible {
+  border-top: initial;
+  border-right: initial;
+  border-left: initial;
+  box-shadow: initial;
+  margin: initial;
+}

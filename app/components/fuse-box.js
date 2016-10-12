@@ -1,0 +1,1 @@
+export { default } from 'ember-fuse-box/components/fuse-box';
