@@ -8,17 +8,12 @@ const {
   },
   get
 } = Ember
-export default Ember.Component.extend({
+// BEGIN-SNIPPET test-container
+export default Component.extend({
   tagName: 'ul',
-  classNames: 'collapsible',
-  attributeBindings: ['data-collapsible', 'style'],
-  'data-collapsible': 'accordian',
-  style: computed(function () {
-    return get(this, 'name') !== 'root' ? 'padding-left: 1rem' : ''
-  }),
+  classNames: 'collapsible popout',
   layout,
-  name: null,
-  content: null,
+
   didInsertElement () {
     this._super(...arguments)
     if (get(this, 'content')) {
@@ -27,4 +22,5 @@ export default Ember.Component.extend({
       })
     }
   }
-});
+})
+// END-SNIPPET

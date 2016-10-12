@@ -6,6 +6,9 @@ html, body.ember-application {
     .page-content {
       height: inherit;
       margin-bottom: initial;
+      .item {
+        height: initial !important;
+      }
       .col {
         height: inherit;
         .snippet {
@@ -24,4 +27,9 @@ html, body.ember-application {
   border-left: initial;
   box-shadow: initial;
   margin: initial;
+  .collapsible-header {
+    margin: .7rem 0;
+    text-transform: uppercase;;
+    text-rendering: optimizeLegibility;
+  }
 }

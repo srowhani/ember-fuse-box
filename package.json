@@ -15,7 +15,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "deploy": "ember build --prod && cd dist && git init && git remote add origin https://github.com/srowhani/ember-fuse-box.git && git checkout -b gh-pages && git add -A . && git commit -m 'init' && git push origin gh-pages -f && cd .. && rm -rf dist"
   },
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
